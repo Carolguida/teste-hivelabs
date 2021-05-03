@@ -20,6 +20,13 @@ exports.getByName = async(name) => {
   return res;
 };
 
+exports.getByNickname = async(nickname) => {
+  const res = await Usuario
+  .findOne({nickname},
+    "name lastname nickname")
+  return res;
+};
+
 exports.put = async(id, data) => {
   await Usuario.findByIdAndUpdate(
     id,
@@ -36,3 +43,5 @@ exports.put = async(id, data) => {
 exports.delete = async(id) => {
   await Usuario.findByIdAndRemove(id);
 };
+
+

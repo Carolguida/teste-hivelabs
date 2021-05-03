@@ -12,6 +12,8 @@ router.put("/editar/:id", controller.put);
 
 router.get("/names/:name", controller.getByName);
 
+router.get("/nicknames/:nickname", controller.getByNickname);
+
 router.delete("/deletar/:id", controller.delete);
 
 module.exports = router;

@@ -60,6 +60,17 @@ exports.getByName = async (req, res, next) => {
   }
 };
 
+//Buscar um usuário pelo nickname
+exports.getByNickname = async (req, res, next) => {
+  try {
+    var data = await repository.getByNickname(req.params.nickname);
+    res.status(200).send(data);
+  } catch (e) {
+    res.status(400).send({ message: "Falha ao buscar o usuário." });
+  }
+};
+
+
 //Atualizar um usuário
 exports.put = async (req, res, next) => {
   try {
