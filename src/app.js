@@ -8,7 +8,7 @@ const app = express();
 const router = express.Router();
 
 //Conexão ao banco de dados
-mongoose.connect('mongodb+srv://carol:senha@clusterapifake.0qhq3.mongodb.net/db_usuarios')
+mongoose.connect('mongodb+srv://user:senha@clusterapifake.0qhq3.mongodb.net/db_usuarios')
 
 
 //Carrega as Models
